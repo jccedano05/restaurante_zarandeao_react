@@ -1,0 +1,179 @@
+@import "variables";
+
+
+.menu {
+    background-color: $white;
+    max-width: unset;
+    padding: 2.5% 5%;
+    text-align: center;
+  
+    
+    .fondo-mariscos{
+        padding: 0;
+        height: 100%;
+
+        & > img{
+            @extend %fondoBG-mariscos;
+            opacity: 0.07;
+        }
+    }
+    
+    
+
+   .card{
+       border: none !important;
+       background-color: transparent;
+       text-align: left;
+   }
+
+    .title {
+        @extend %base-title;
+      }
+      .titulos-menu {
+        @extend %base-titulosMenu;
+      }
+
+      .subtitulos-menu{
+        @extend  %base-paragraph;
+      }
+
+
+
+
+    .description{
+        margin-top: 1.8vw;
+        margin-bottom: 2.5vw;
+        @extend %base-paragraph;
+    }
+
+    .card-img-top {
+        height: 15.5vw;
+    }
+
+    .card-title {
+        font-size: 28px;
+        color: $blue-logo;
+        font-weight: bold;
+      }
+
+      .card-text{
+        color: $gray;
+        font-size: 16px;
+      }
+
+      
+}
+
+@media (max-width: 600px) {
+   
+    .title {
+        font-size: 26px!important;
+        margin-top: 40px !important;
+      }
+    .description{
+        font-size: 18px!important;
+        margin-bottom: 40px !important;
+    }
+
+    .card-img-top {
+        height: 52.5vw !important;
+    }
+
+}
+
+
+
+
+.portfolio{
+
+  margin-top: 0 !important;
+ 
+}
+
+
+.title-portafolio {
+  @extend %base-title;
+}
+
+.portafolio-subtext{
+  font-size: 2rem !important;
+  color: #343a40 !important;
+}
+
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 28rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: #073e61 ;
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+.portfolio-modal .close {
+  position: absolute;
+  z-index: 1;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #073e61;
+  opacity: 1;
+}
+
+
+.menuCategory {
+  padding: 20px 0 40px 3vw;
+  margin-bottom: 10px;
+  clear: both;
+  text-align: left;
+}
+
+.dmRestaurantMenuCol {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0px 35px 0 0;
+  line-height: 150%;
+
+}
+
+ .menuItemBox {
+  border-bottom-width: 1px !important;
+  border-bottom-style: dotted !important;
+  border-bottom-color: rgba(187,187,187,1) !important;
+  margin-bottom: 2.5vw !important;
+}
+
+.menuItemName {
+  color: rgba(0,0,0,1) !important;
+  font-weight: bold !important;
+}
+
+.menuItemDesc {
+  color: rgba(121,118,118,1) !important;
+  font-weight: normal !important;
+}

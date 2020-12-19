@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/** colores */
+/** Alturas **/
+/** fuentes */
+/** placeholders */
+.menu .title {
+    font-family: 'Chaparral Pro', serif;
+    color: #c2322a;
+    font-size: calc(1.2em + 1.3vw);
+    font-weight: bold;
+}
+
+.menu .description {
+    font-family: 'Chaparral Pro', serif;
+    color: #4a4a4a;
+    font-size: calc(0.7em + 1vw);
+}
+
+.menu .acceso-menu {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu .fondo-mariscos > img {
+    opacity: 0.045;
+    position: absolute;
+    margin-top: -50px;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+}
+
+.stories-carousel {
+    height: 38.3vw;
+    justify-items: center;
+}
+
+#carouselExampleIndicators {
+    height: 100%;
+}
+
+.carousel-caption h1 {
+    font-family: 'Chaparral Pro';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3.5vw;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1.5vw;
+}
+
+.conocenos {
+    margin: 0 37% 0.3vw;
+    padding-bottom: 0.3vw;
+    border: 0.15vw white solid;
+}
+
+.carousel-caption a {
+    font-size: 1.5vw;
+    color: white;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    display: block !important;
+}
+
+.card-media img {
+    width: 100%;
+    height: 38.3vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.success-stories .stories-carousel .carousel-indicators {
+    position: initial;
+    /** ó: position: static; */
+}
+
+.carousel-indicators li {
+    width: 1.5vw !important;
+    height: 0.15vw !important;
+}
+
+@media (max-width: 780px) {
+    .stories-carousel {
+        height: 68.3vw;
+    }
+
+    .card-media img {
+        height: 68.3vw;
+    }
+
+    .carousel-caption h1 {
+        font-size: 7.5vw;
+    }
+
+    .conocenos {
+        margin: 0 20% 0.3vw;
+    }
+
+    .carousel-caption a {
+        font-size: 3.5vw;
+    }
+
+    .carousel-indicators li {
+        width: 1.5vw !important;
+        height: 0.25vw !important;
+    }
+}
+
+.menu {
+    background-color: #ffffff;
+    max-width: unset;
+    padding: 2.5% 5%;
+    text-align: center;
+}
+.menu .fondo-mariscos {
+    padding: 0;
+    height: 100%;
+}
+.menu .description {
+    margin-top: 1.8vw;
+    margin-bottom: 2.5vw;
+}
+.menu .card-img-top {
+    height: 15.5vw;
+}
+.menu .card-title {
+    font-size: 25px;
+    color: #1876af;
+    font-weight: bold;
+}
+.menu .card-text {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+.menu .acceso-menu {
+    margin: 0 40% 1.6vw;
+    padding: 1vw 0;
+    border: 0.05vw #4a4a4a solid;
+    font-weight: 400;
+}
+.menu .acceso-menu > a {
+    color: #4a4a4a;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 26px !important;
+        margin-top: 40px !important;
+    }
+
+    .description {
+        font-size: 18px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .card-img-top {
+        height: 52.5vw !important;
+    }
+
+    .acceso-menu {
+        margin: 20px 20% 1.6vw !important;
+        border: 0.03vw #4a4a4a solid !important;
+    }
+}
+
+/*# sourceMappingURL=main.css.map */
