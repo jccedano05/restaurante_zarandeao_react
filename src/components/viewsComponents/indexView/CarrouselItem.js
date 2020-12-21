@@ -13,7 +13,7 @@ export const CarrouselItem = (props) => {
         <div className={`carousel-item ${active}`}>
                     <div className="card-media">
                         <figure>
-                            <img src={`.././assets/img_platillos_restaurantes/${srcSectionImage}/${srcNameImage}.png`} alt={`${srcNameImage}`} />
+                            <img src={`/assets/img_platillos_restaurantes/${srcSectionImage}/${srcNameImage}.png`} alt={`${srcNameImage}`} />
                         </figure>
                     </div>
         </div>
