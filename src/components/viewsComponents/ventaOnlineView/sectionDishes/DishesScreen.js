@@ -11,8 +11,8 @@ export const DishesScreen = () => {
 
     const sectionId = section.replace(/_/gi," ");
 
-    const {renderProductosVentas} = useContext(TotalVentaContext)
-
+    const {renderProductosVentas} = useContext(TotalVentaContext) ;
+ 
     return (
         <>
         <BarraVenta />
@@ -36,7 +36,7 @@ export const DishesScreen = () => {
                 
 
 
-                { renderProductosVentas &&
+                { renderProductosVentas  &&
                     <div className="col-md-4 py-3 animate__animated animate__fadeInRight mt-5"   >
                         <ArticulosList />
                     </div>

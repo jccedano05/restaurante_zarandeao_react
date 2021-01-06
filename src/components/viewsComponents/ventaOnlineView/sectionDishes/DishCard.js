@@ -40,7 +40,7 @@ export const DishCard = ({
 
 
     //USE CONTEXT
-    const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas} = useContext(TotalVentaContext);
+    const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, renderProductosVentas, setRenderProductosVentas} = useContext(TotalVentaContext);
 
 
 
@@ -52,6 +52,7 @@ export const DishCard = ({
         }else {
             setRenderProductosVentas(0);
         }
+        localStorage.setItem("renderProductosVentas", renderProductosVentas);
     }
      
                 
@@ -105,7 +106,9 @@ export const DishCard = ({
                 localStorage.setItem(id, counter);
         
                 setPrecioTotalVenta( (price * counter) + precioTotalVenta)
+                
                 setRenderProductosVentas(1);
+                localStorage.setItem("renderProductosVentas", renderProductosVentas);
             }
         }
     }
