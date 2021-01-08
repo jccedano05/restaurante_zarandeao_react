@@ -15,14 +15,7 @@ export const DishCard = ({
 
     const {counter, increment, decrement}=  useCounter(parseInt(localStorage.getItem(id)) || 0); 
 
-   /* useMemo(() => resetCounter(counter)), [counter])
 
-    const resetCounter = (c) =>{
-        if(c === 0){
-
-            reset();
-        }
-    } */
         
    
 
@@ -40,13 +33,13 @@ export const DishCard = ({
 
 
     //USE CONTEXT
-    const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, renderProductosVentas, setRenderProductosVentas} = useContext(TotalVentaContext);
+    const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, renderProductosVentas, setRenderProductosVentas, renderListClose, setRenderListClose} = useContext(TotalVentaContext);
 
 
 
     //RENDER SECCIONES
     if(productosAgregados!==null){
-        if(productosAgregados.length > 0){
+        if(productosAgregados.length > 0  && renderListClose===0){
 
             setRenderProductosVentas(1);
         }else {
@@ -95,6 +88,7 @@ export const DishCard = ({
                 setPrecioTotalVenta( (price * counter) + precioTotalVenta)
                 }
            }
+           setRenderListClose(0);
         }
 
 
@@ -108,6 +102,7 @@ export const DishCard = ({
                 setPrecioTotalVenta( (price * counter) + precioTotalVenta)
                 
                 setRenderProductosVentas(1);
+                setRenderListClose(0);
                 localStorage.setItem("renderProductosVentas", renderProductosVentas);
             }
         }

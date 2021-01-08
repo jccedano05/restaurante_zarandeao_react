@@ -5,15 +5,25 @@ import { ArticulosAgregados } from './ArticulosAgregados'
 export const ArticulosList = () => {
 
 
-    const { precioTotalVenta,  productosAgregados} = useContext(TotalVentaContext);
+    const { precioTotalVenta,  productosAgregados, setRenderProductosVentas, setRenderListClose} = useContext(TotalVentaContext);
 
+
+    const handleBtnClose = () => {
+        setRenderProductosVentas(0);
+        setRenderListClose(1);
+    }
 
     
 
     return (
         <>
             <div className="card d-block bg-dark">
-                <h1 className="card-title h1 text-light "> Compra </h1>
+                <div className="d-flex justify-content-between">
+                    <h1 className="card-title h1 text-light "> Compra </h1>
+                    <button className="btn btn-outline-light" onClick={handleBtnClose}>
+                        <i class="fas fa-times-circle fa-3x"></i>
+                    </button>
+                </div>
             
             
                 <div className=" card-body ">

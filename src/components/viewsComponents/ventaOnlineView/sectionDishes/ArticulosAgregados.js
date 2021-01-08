@@ -54,7 +54,7 @@ const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAg
         
         
 
-//<li className="h5 my-4">{`${dish_name}  -  Cantidad: ${counter}  -  Precio:${price}  -  Total:${price*counter} `}</li>
+
     <div className="card my-3 ">
         <div className=" row">
             <div className="col-md">

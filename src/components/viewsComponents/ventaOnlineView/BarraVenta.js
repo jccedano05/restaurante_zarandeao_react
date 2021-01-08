@@ -4,10 +4,10 @@ import { TotalVentaContext } from '../../../variablesContext/TotalVentaContext'
 
 export const BarraVenta = () => {
 
-
+ 
   
     //Variable Global
-   const {precioTotalVenta, productosAgregados} = useContext(TotalVentaContext);
+   const {precioTotalVenta, productosAgregados, setRenderProductosVentas, setRenderListClose} = useContext(TotalVentaContext);
   
 
    const handleVentaCompleta = (p = productosAgregados) => {
@@ -24,6 +24,8 @@ export const BarraVenta = () => {
         } else{
             console.log("No se han agregado productos aun")
         }
+        setRenderProductosVentas(1);
+        setRenderListClose(0);
    }
 
  

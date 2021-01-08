@@ -10,7 +10,7 @@ export const VentaRestaurante = () => {
      const [productosAgregados, setProductosAgregados] = useState(null);
 
     
-     
+     const [renderListClose, setRenderListClose] = useState(0)
      
 
      const [renderProductosVentas, setRenderProductosVentas] = useState(0)
@@ -19,7 +19,7 @@ export const VentaRestaurante = () => {
 
     return (
 
-        <TotalVentaContext.Provider value={{precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas, renderProductosVentas}}> 
+        <TotalVentaContext.Provider value={{precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas, renderProductosVentas, renderListClose, setRenderListClose}}> 
         <div id="principal">
 
     
