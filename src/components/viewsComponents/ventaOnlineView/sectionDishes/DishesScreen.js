@@ -3,7 +3,6 @@ import {  useParams } from 'react-router-dom';
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext';
 import { BarraVenta } from '../BarraVenta';
 import { ArticulosList } from './ArticulosList';
-//import { ArticulosAgregados } from './ArticulosAgregados';
 import { DishesList } from './DishesList';
 
 export const DishesScreen = () => {
@@ -36,7 +35,7 @@ export const DishesScreen = () => {
                 
 
 
-                { renderProductosVentas  &&
+                { renderProductosVentas === 1 &&
                     <div className="col-md-4 py-3 animate__animated animate__fadeInRight mt-5"   >
                         <ArticulosList />
                     </div>
