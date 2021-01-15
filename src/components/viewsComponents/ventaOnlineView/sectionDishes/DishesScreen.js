@@ -16,7 +16,7 @@ export const DishesScreen = () => {
         <>
         <BarraVenta />
 
-        <div className="py-2 ml-5 d-flex ">
+        <div className="py-2 mx-3 d-flex ">
             <div className="row ">
                 {
                     renderProductosVentas === 1 &&
