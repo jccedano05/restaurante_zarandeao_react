@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext';
 import { ArticulosAgregados } from './ArticulosAgregados'
 
+
 export const ArticulosList = () => {
 
 
@@ -14,10 +15,11 @@ export const ArticulosList = () => {
     }
 
     
+    
 
     return (
         <>
-            <div className="card d-block bg-dark">
+            <div className="card d-block bg-dark ">
                 <div className="d-flex justify-content-between">
                     <h1 className="card-title h1 text-light "> Compra </h1>
                     <button className="btn btn-outline-light" onClick={handleBtnClose}>

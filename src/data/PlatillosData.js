@@ -225,7 +225,7 @@ export const platillosData = [
         'id': '0027',
         'idName': 'pescado_empanizado',
         'dish_name':'Pescado Empanizado', 
-        'description':'Pescado entero marinado con salsa de mantequilla, ajo y mayonesa con ensalada de casa cocinado a las brazas', 
+        'description':'Filete de pescado empanizado', 
         'section':'platillos de pescado',
         'price':'150.00'
     },
@@ -233,7 +233,7 @@ export const platillosData = [
         'id': '0028',
         'idName': 'pescado_frito',
         'dish_name':'Pescado Frito', 
-        'description':'pulpo a las brazas marinado con mantequilla y ajo',
+        'description':'Pescado entero freido en aceite hasta dorar',
         'section':'platillos de pescado',
         'price':'110.00'
     },
@@ -241,7 +241,7 @@ export const platillosData = [
         'id': '0029',
         'idName': 'pescado_mojo_ajo',
         'dish_name':'Pescado al Mojo de Ajo', 
-        'description':'Camarones capeados con un toque de cerveza clara, en una tortilla hecha a mano',
+        'description':'Filete de pescado con mantequilla y ajo',
         'section':'platillos de pescado',
         'price':'90.00'
     },
@@ -249,7 +249,7 @@ export const platillosData = [
         'id': '0030',
         'idName': 'pescado_relleno',
         'dish_name':'Pescado Relleno', 
-        'description':'Camarones a la diabla en una tortilla de maiz hecha a mano, con queso gratinado',
+        'description':'Pescado relleno de camaron, pulpo y queso manchego',
         'section':'platillos de pescado',
         'price':'90.00'
     }

@@ -1,5 +1,4 @@
 import React, { useContext, useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { getDishesBySection } from '../../../../selectors/getDishesBySection'
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext'
 
@@ -15,19 +14,9 @@ export const DishesList = ({section}) => {
 
     return (
 
-        <>
-            <div className="d-flex justify-content-start py-3">
-                <Link to={`/ventaOnline/menuGeneral`}>
-                    <i className ="fas fa-arrow-circle-left fa-5x"></i>
-                </Link>
-                <Link to={`/ventaOnline/menuGeneral`}  className="ml-5 my-auto">
-                    <h1>Menu  /</h1>
-                </Link>
-                <Link to={`/ventaOnline/menuGeneral/${section}`} className="ml-1 my-2">
-                    <h1 className="ml-3 my-auto">{section} </h1>
-                </Link>
-                
-            </div>
+        
+            
+
 
             <div className="row">
                 {
@@ -51,6 +40,6 @@ export const DishesList = ({section}) => {
                     ))
                 }
             </div>
-        </>
+        
     )
 }

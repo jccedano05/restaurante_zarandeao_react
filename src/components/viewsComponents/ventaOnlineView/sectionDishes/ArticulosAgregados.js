@@ -55,7 +55,7 @@ const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAg
         
 
 
-    <div className="card my-3 ">
+    <div className="card mt-2 ">
         <div className=" row">
             <div className="col-md">
                 <img src={`../.././assets/img_platillos_restaurantes/${sectionId}/${idName}.png`} className="card-img img-fluid" alt={dish_name} />

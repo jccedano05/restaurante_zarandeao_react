@@ -14,7 +14,9 @@ export const VentaMenuScreen = () => {
 
     return (
         <> 
-        <BarraVenta />
+        <header className="bg-dark py-1" id="navbar">
+            <BarraVenta />
+        </header>
             
 
         <div className="container pl-0 pr-0">

@@ -103,4 +103,19 @@
     }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.listArticulos {
+    position: fixed;
+    top: 1;
+    width: 100%;
+    z-index: 2;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
 /*# sourceMappingURL=navbar-redesSociales.css.map */

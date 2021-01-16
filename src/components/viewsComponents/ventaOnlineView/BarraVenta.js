@@ -1,9 +1,16 @@
 import React, {  useContext } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import { TotalVentaContext } from '../../../variablesContext/TotalVentaContext'
 
 
 export const BarraVenta = () => {
 
+    const { section } = useParams();
+    let sectionId = "";
+
+    if(section){
+         sectionId = section.replace(/_/gi," ");
+    }
  
   
     //Variable Global
@@ -31,17 +38,30 @@ export const BarraVenta = () => {
  
 
     return (
-        <>
-            <div className="bg-dark py-3 ">
-            <div className="container d-flex justify-content-end  text-light">
+            <div className=" d-flex justify-content-between  mx-5">
+            <div className="d-flex justify-content-start py-3">
+               { section && 
+                    <Link to={`/ventaOnline/menuGeneral`}>
+                        <i className ="fas fa-arrow-circle-left fa-5x text-warning"></i>
+                    </Link>
+                }
                 
-                <button className="btn btn-outline-warning  justify-content-center px-4" onClick={ ()=> handleVentaCompleta(productosAgregados) }>
-                    <h1 className=" ">${precioTotalVenta || 0}.00</h1>
-                    <i className="fas fa-shopping-cart fa-2x  align-middle "></i>
-                </button>
+                <Link to={`/ventaOnline/menuGeneral`}  className="ml-4 my-auto text-warning">
+                    <h1>Menu  </h1>
+                </Link>
+                { section && 
+                    <Link to={`/ventaOnline/menuGeneral/${sectionId}`} className="ml-1 my-2 text-warning">
+                        <h1 className="ml-2 my-1">/ {sectionId} </h1>
+                    </Link>
+                }   
+            </div>
+                
+                
+                    <button className="btn btn-outline-warning  justify-content-end px-4" onClick={ ()=> handleVentaCompleta(productosAgregados) }>
+                        <h1 className=" ">${precioTotalVenta || 0}.00</h1>
+                        <i className="fas fa-shopping-cart fa-2x  align-middle "></i>
+                    </button>
                 
             </div>  
-            </div> 
-        </>
     )
 }
