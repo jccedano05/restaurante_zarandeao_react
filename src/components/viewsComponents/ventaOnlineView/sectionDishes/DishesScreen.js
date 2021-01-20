@@ -19,7 +19,7 @@ export const DishesScreen = () => {
 
         const navbarSticky = document.getElementById("navbar") ;
         
-        const sticky = navbarSticky.offsetTop + (navbarSticky.offsetHeight / 2);
+        const sticky = navbarSticky.offsetTop ;
         
         const scrollCallback = window.addEventListener("scroll", () => {
             
