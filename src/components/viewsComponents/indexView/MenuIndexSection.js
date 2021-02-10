@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 export const MenuIndexSection = () => {
     return (
         <>
+
+
+
             <section className="container menu">
                 <div className="info_menu">
                     <h2 className="title">LO MEJOR DEL MAR A TU PALADAR</h2>
@@ -69,6 +72,11 @@ export const MenuIndexSection = () => {
                 <div className="acceso-menu">
                     <Link to="/menu">Nuestro Menu</Link>
                 </div>
+
+
+                
+
+
 </>
     )
 }

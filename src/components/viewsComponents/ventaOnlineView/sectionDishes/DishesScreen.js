@@ -1,6 +1,9 @@
 import React, { useContext, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import {  useParams } from 'react-router-dom';
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext';
+import { FooterScreen } from '../../footerView/FooterScreen';
+import { NavbarScreen } from '../../navbarView/NabvarScreen';
 import { BarraVenta } from '../BarraVenta';
 import { ArticulosList } from './ArticulosList';
 import { DishesList } from './DishesList';
@@ -11,6 +14,12 @@ export const DishesScreen = () => {
     const sectionId = section.replace(/_/gi," ");
 
     const {renderProductosVentas} = useContext(TotalVentaContext) ;
+
+    const {openDualScreenVenta} = useSelector(state => state.ui)
+
+    console.log(openDualScreenVenta)
+
+
 
 
     // ---- Sticky Header Fixed ---
@@ -42,6 +51,9 @@ export const DishesScreen = () => {
 
     return (
         <>
+
+<NavbarScreen />
+
         <header className="bg-dark py-1" id="navbar">
             <BarraVenta />
         </header>
@@ -49,14 +61,14 @@ export const DishesScreen = () => {
         <div className="py-2 mx-3 d-flex ">
             <div className="row ">
                 {
-                    renderProductosVentas === 1 &&
+                    /* renderProductosVentas === 1 */ (openDualScreenVenta) &&
                         <div className="col-md-8 animate__animated animate__fadeInLeft">
                             <hr />
                             <DishesList section={sectionId} />
                         </div>     
                 }
                  {
-                    renderProductosVentas === 0 &&
+                    /* renderProductosVentas === 0 */ (!openDualScreenVenta) &&
                         <div className="col-md-12 px-5 animate__animated animate__fadeIn ">
                             <hr />
                             <DishesList section={sectionId} />
@@ -65,7 +77,7 @@ export const DishesScreen = () => {
                 
 
 
-                { renderProductosVentas === 1 &&
+                { /* renderProductosVentas === 1 */  (openDualScreenVenta) &&
                     <div className="col-md-4 py-3 animate__animated animate__fadeInRight " >
                         <ArticulosList />
                     </div>
@@ -73,6 +85,8 @@ export const DishesScreen = () => {
             </div>
             
         </div>
+
+        <FooterScreen />
         </>
     )
 }

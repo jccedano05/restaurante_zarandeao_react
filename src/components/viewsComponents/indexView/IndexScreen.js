@@ -1,4 +1,6 @@
 import React from 'react';
+import { FooterScreen } from '../footerView/FooterScreen';
+import { NavbarScreen } from '../navbarView/NabvarScreen';
 import { Carrousel } from './Carrousel';
 import {  MenuIndexSection } from './MenuIndexSection';
 
@@ -6,6 +8,7 @@ import {  MenuIndexSection } from './MenuIndexSection';
 export const IndexScreen = () => {
     return (
         <>
+    <NavbarScreen />
 
         <article className="sec_ban">
           
@@ -17,7 +20,7 @@ export const IndexScreen = () => {
 
         </section>
         
-        
+        <FooterScreen />
 
         </>
     )

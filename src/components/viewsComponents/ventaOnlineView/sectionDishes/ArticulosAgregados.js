@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { useDispatch } from "react-redux";
+import { uiOpenDualScreenVenta } from "../../../../actions/uiAction";
 import { conditionQuantityProduct } from "../../../../helpers/conditionQuantityProduct";
 import { TotalVentaContext } from "../../../../variablesContext/TotalVentaContext";
 
@@ -10,7 +12,7 @@ export const ArticulosAgregados = ({dish_name, price, counter, section, idName, 
 //USE CONTEXT
 const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas} = useContext(TotalVentaContext);
 
-
+const dispatch = useDispatch()
     
 
 
@@ -39,6 +41,9 @@ const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAg
                 if(productosAgregados.length > 0){
 
                     setRenderProductosVentas(1);
+
+                    dispatch( uiOpenDualScreenVenta () )
+
                 } 
 
                

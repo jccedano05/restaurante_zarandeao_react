@@ -1,5 +1,7 @@
 
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { uiCloseDualScreenVenta, uiOpenDualScreenVenta } from '../../../../actions/uiAction';
 import { conditionQuantityProduct } from '../../../../helpers/conditionQuantityProduct';
 import { useCounter } from '../../../../hooks/useCounter';
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext';
@@ -16,8 +18,7 @@ export const DishCard = ({
     const {counter, increment, decrement}=  useCounter(parseInt(localStorage.getItem(id)) || 0); 
 
 
-        
-   
+    const dispatch = useDispatch()
 
 
 
@@ -36,17 +37,28 @@ export const DishCard = ({
     const {precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, renderProductosVentas, setRenderProductosVentas, renderListClose, setRenderListClose} = useContext(TotalVentaContext);
 
 
-
-    //RENDER SECCIONES
+    useEffect(() => {
+        
+        //RENDER SECCIONES
     if(productosAgregados!==null){
         if(productosAgregados.length > 0  && renderListClose===0){
 
-            setRenderProductosVentas(1);
+            //setRenderProductosVentas(1);
+            dispatch( uiOpenDualScreenVenta() );
+
+
         }else {
-            setRenderProductosVentas(0);
+            //setRenderProductosVentas(0);
+            
+            dispatch( uiCloseDualScreenVenta() );
+            
         }
         localStorage.setItem("renderProductosVentas", renderProductosVentas);
     }
+        
+    }, [ productosAgregados, renderListClose ])
+
+
      
                 
 
@@ -101,7 +113,11 @@ export const DishCard = ({
         
                 setPrecioTotalVenta( (price * counter) + precioTotalVenta)
                 
-                setRenderProductosVentas(1);
+                //setRenderProductosVentas(1);
+                
+                dispatch( uiOpenDualScreenVenta() );
+                
+
                 setRenderListClose(0);
                 localStorage.setItem("renderProductosVentas", renderProductosVentas);
             }

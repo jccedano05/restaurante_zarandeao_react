@@ -1,0 +1,4 @@
+.adminScreen__main-content {
+    display: flex;
+    flex-direction: column;
+}

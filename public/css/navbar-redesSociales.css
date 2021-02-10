@@ -9,6 +9,11 @@
     text-align: right;
 }
 
+.navViewMobile {
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar {
     margin-left: 7%;
     margin-right: 11%;
@@ -100,6 +105,10 @@
     }
     .navbar .actions {
         margin-right: 50px;
+    }
+
+    .navViewMobile {
+        margin-left: 0 !important;
     }
 }
 

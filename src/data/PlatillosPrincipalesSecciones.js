@@ -19,7 +19,7 @@ export const PlatillosPrincipalesSecciones = [
             'section':'para picar',
             'price':'60.00'
         },
-        //Principal cocina fria
+        //Principal cocina fria 
         {
             'id': '0011',
             'idName': 'callo_hacha',

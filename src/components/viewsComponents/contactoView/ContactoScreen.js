@@ -1,7 +1,13 @@
 import React from 'react'
+import { FooterScreen } from '../footerView/FooterScreen'
+import { NavbarScreen } from '../navbarView/NabvarScreen'
 
 export const ContactoScreen = () => {
     return (
+        <> 
+
+    <NavbarScreen />
+
         <section className="contacto">
     <section className="row">
         <div className="col-md-6 texto">
@@ -58,5 +64,8 @@ export const ContactoScreen = () => {
         </div>
     </section>
 </section>
+
+<FooterScreen />
+                        </>
     )
 }

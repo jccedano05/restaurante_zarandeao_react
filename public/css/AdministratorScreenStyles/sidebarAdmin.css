@@ -1,0 +1,23 @@
+.sidebarAdmin__main {
+    background-color: gray;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20vw;
+}
+
+.sidebarAdmin__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarAdmin__btnSignOut {
+    background-color: red;
+    height: 100%;
+    border-radius: 5px;
+    padding: 3px 20px;
+    color: aliceblue;
+}

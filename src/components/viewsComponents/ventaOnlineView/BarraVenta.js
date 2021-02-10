@@ -1,9 +1,13 @@
 import React, {  useContext } from 'react'
+import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { uiOpenDualScreenVenta } from '../../../actions/uiAction';
 import { TotalVentaContext } from '../../../variablesContext/TotalVentaContext'
 
 
 export const BarraVenta = () => {
+
+    const dispatch = useDispatch()
 
     const { section } = useParams();
     let sectionId = "";
@@ -32,6 +36,9 @@ export const BarraVenta = () => {
             console.log("No se han agregado productos aun")
         }
         setRenderProductosVentas(1);
+        
+        dispatch( uiOpenDualScreenVenta() );
+
         setRenderListClose(0);
    }
 

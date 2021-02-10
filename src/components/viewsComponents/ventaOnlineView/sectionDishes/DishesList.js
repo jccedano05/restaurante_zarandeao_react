@@ -1,6 +1,6 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useMemo } from 'react'
+import { useSelector } from 'react-redux'
 import { getDishesBySection } from '../../../../selectors/getDishesBySection'
-import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext'
 
 import { DishCard } from './DishCard'
 
@@ -9,7 +9,8 @@ export const DishesList = ({section}) => {
 
     const dishes = useMemo(() => getDishesBySection( section ), [section])
 
-    const {renderProductosVentas} = useContext(TotalVentaContext)
+
+    const {openDualScreenVenta} = useSelector(state => state.ui)
     
 
     return (
@@ -20,7 +21,7 @@ export const DishesList = ({section}) => {
 
             <div className="row">
                 {
-                    renderProductosVentas === 0 &&
+                     ( !openDualScreenVenta ) &&
                     dishes.map( dish => (
                         
                         
@@ -30,7 +31,7 @@ export const DishesList = ({section}) => {
                     ))
                 }
                 {
-                    renderProductosVentas === 1 &&
+                    ( openDualScreenVenta ) &&
                     dishes.map( dish => (
                         
                         

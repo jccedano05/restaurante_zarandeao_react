@@ -1,6 +1,8 @@
 import React, {  useState } from 'react'
 import { TotalVentaContext } from './variablesContext/TotalVentaContext'
 import { DashboardRoute } from './routers/DashboardRoute'
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 export const VentaRestaurante = () => {
 
@@ -19,16 +21,19 @@ export const VentaRestaurante = () => {
 
     return (
 
-        <TotalVentaContext.Provider value={{precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas, renderProductosVentas, renderListClose, setRenderListClose}}> 
-        <div id="principal">
+        <Provider store={ store }>
 
-    
 
-        <DashboardRoute />
+            <TotalVentaContext.Provider value={{precioTotalVenta, setPrecioTotalVenta, productosAgregados, setProductosAgregados, setRenderProductosVentas, renderProductosVentas, renderListClose, setRenderListClose}}> 
+
+                <div id="principal">    
+
+                    <DashboardRoute />
         
-        </div>
+                </div>
 
-        </TotalVentaContext.Provider>
+            </TotalVentaContext.Provider>
 
+        </Provider>
     )
 }

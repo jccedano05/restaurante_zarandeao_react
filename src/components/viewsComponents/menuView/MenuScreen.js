@@ -1,5 +1,7 @@
 import React from 'react'
 import { PlatillosPrincipalesSecciones } from '../../../data/PlatillosPrincipalesSecciones'
+import { FooterScreen } from '../footerView/FooterScreen'
+import { NavbarScreen } from '../navbarView/NabvarScreen'
 import { ModalMenu } from './ModalMenu'
 
 export const MenuScreen = () => {
@@ -8,6 +10,9 @@ export const MenuScreen = () => {
 
     return (
         <>
+
+<NavbarScreen />
+
 <section className="menu">
     
     <section className="container menu">
@@ -44,6 +49,7 @@ export const MenuScreen = () => {
 
 
 
+<FooterScreen />
 
 
         </>

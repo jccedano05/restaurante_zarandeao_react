@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+import { useDispatch } from 'react-redux';
+import { uiCloseDualScreenVenta } from '../../../../actions/uiAction';
 import { TotalVentaContext } from '../../../../variablesContext/TotalVentaContext';
 import { ArticulosAgregados } from './ArticulosAgregados'
 
@@ -8,10 +10,14 @@ export const ArticulosList = () => {
 
     const { precioTotalVenta,  productosAgregados, setRenderProductosVentas, setRenderListClose} = useContext(TotalVentaContext);
 
+    const dispatch = useDispatch()
+
 
     const handleBtnClose = () => {
         setRenderProductosVentas(0);
         setRenderListClose(1);
+
+        dispatch( uiCloseDualScreenVenta() )
     }
 
     

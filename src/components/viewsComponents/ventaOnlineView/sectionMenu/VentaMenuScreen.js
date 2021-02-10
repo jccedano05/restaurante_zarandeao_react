@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { PlatillosPrincipalesSecciones } from '../../../../data/PlatillosPrincipalesSecciones'
+import { FooterScreen } from '../../footerView/FooterScreen'
+import { NavbarScreen } from '../../navbarView/NabvarScreen'
 import { BarraVenta } from '../BarraVenta'
 
 export const VentaMenuScreen = () => {
@@ -14,9 +16,12 @@ export const VentaMenuScreen = () => {
 
     return (
         <> 
+
+<NavbarScreen />
+
         <header className="bg-dark py-1" id="navbar">
             <BarraVenta />
-        </header>
+        </header> 
             
 
         <div className="container pl-0 pr-0">
@@ -37,6 +42,8 @@ export const VentaMenuScreen = () => {
             }
         </div>
     </div>
+
+    <FooterScreen />
         </>    
     )
 }
